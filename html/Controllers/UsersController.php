@@ -1,11 +1,11 @@
 <?php
-require_once('../Models/UsersModel.php');
+require_once('./Models/UsersModel.php');
 
 class UsersController
 {
     public function __construct()
     {
-        $users = new UsersModel();
+        $this->users = new UsersModel();
     }
 
     public function getUsers()
@@ -13,7 +13,7 @@ class UsersController
 
     }
 
-    public function getUser($id)
+    public function getUser(int $id)
     {
         
     }

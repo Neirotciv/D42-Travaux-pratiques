@@ -1,20 +1,23 @@
 <?php
-require_once('../Models/CoursesModel.php');
+require_once('./Models/CoursesModel.php');
 
 class CoursesController
 {
+    private $model;
+
     public function __construct()
     {
-        $courses = new CoursesModel();
+        $this->model = new CoursesModel();
     }
 
-    public function getCourses()
+    public function allCourses()
     {
+        $courses = $this->model->courses();
 
     }
 
-    public function getCourse(int $id)
+    public function course(int $id)
     {
-
+        return $this->model->course($id);
     }
 }
