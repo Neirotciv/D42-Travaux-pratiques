@@ -1,9 +1,10 @@
 <?php
-require_once('Model.php');
+
+namespace Models;
 
 class UsersModel extends Model
 {
-    public function users()
+    public function users(): array
     {
         $sql = "SELECT
             id,
@@ -12,14 +13,15 @@ class UsersModel extends Model
             avatar,
             address,
             phone,
-            trigram
+            trigram,
+            role
             FROM users;
         ";
         
-        $this->database->fetch($sql);
+        return $this->fetchAll($sql);
     }
 
-    public function user(int $id)
+    public function user(int $id): object
     {
         $sql = "SELECT
             id,
@@ -33,6 +35,6 @@ class UsersModel extends Model
             WHERE id = :id
         ";
 
-        $this->database->fetch($sql, [':id' => $id]);
+        return $this->fetch($sql, [':id' => $id]);
     }
 }

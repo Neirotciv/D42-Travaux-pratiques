@@ -1,5 +1,6 @@
 <?php
-require_once('Model.php');
+
+namespace Models;
 
 class CoursesModel extends Model
 {
@@ -14,7 +15,7 @@ class CoursesModel extends Model
             FROM courses
         ";
         
-        return $this->fetch($sql);
+        return $this->fetchAll($sql);
     }
 
     public function course(int $id)

@@ -1,0 +1,28 @@
+html {
+  background-color: white;
+}
+
+.container {
+  width: 90%;
+}
+
+.card {
+  margin: 20px;
+  height: 350px;
+  width: 250px;
+  background-color: white;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+.card img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .details {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

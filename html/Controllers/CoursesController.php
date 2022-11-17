@@ -1,23 +1,40 @@
 <?php
-require_once('./Models/CoursesModel.php');
+
+namespace Controllers;
+
+use \Models\CoursesModel;
 
 class CoursesController
 {
-    private $model;
-
+    private object $model;
+    
     public function __construct()
     {
         $this->model = new CoursesModel();
     }
-
-    public function allCourses()
+    
+    /**
+     * allCourses Get all the courses and display in view
+     *
+     * @return void
+     */
+    public function allCourses(): void
     {
         $courses = $this->model->courses();
-
+        compact('courses');
+        include('views/courses/allCourses.php');
     }
-
-    public function course(int $id)
+    
+    /**
+     * course Get the course and display in view
+     *
+     * @param  mixed $id The id of the course we want to get
+     * @return void
+     */
+    public function course(int $id): void
     {
-        return $this->model->course($id);
+        $course = $this->model->course($id);
+        compact('course');
+        include('../html/views/courses/course.php');
     }
 }

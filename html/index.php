@@ -1,37 +1,41 @@
 <?php
 
-require_once('./Controllers/UsersController.php');
-require_once('./Controllers/CoursesController.php');
+use \Controllers\CoursesController;
+use \Controllers\UsersController;
+use \Autoload\Autoloader;
 
-$users = new UsersController();
-$courses = new CoursesController();
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('DS', DIRECTORY_SEPARATOR);
+
+require('Autoload/Autoloader.php');
+Autoloader::register();
 
 $url = explode('?', $_SERVER['REQUEST_URI'])[0];
 $data = explode('/', $url);
 $page = $data[1];
-echo $page;
+
+$users = new UsersController();
+$courses = new CoursesController();
 
 switch ($page) 
 {
-    // '/' Index
     case '':
-        echo 'index';
+        include('./views/index/index.php');
         break;
-    // '/cours' Afficher tout les cours
     case 'cours':
+        if (!empty($data[2])) {
+            $courses->course($data[2]);
+            break;
+        }
         $courses->allCourses();
         break;
-    // '/cours/:id' Afficher le cours sélectionné
-    case 'cours':
-        echo 'vue cours par id';
-        $courses->allCourses();
+    case 'cours/id':
+        $courses->course(4);
         break;
-    // '/professeurs' Afficher tout les professeurs
     case 'professeurs':
-        echo 'vue professeurs';
+        $users->getUsers();
         break;
-    // '/professeur/:id' Afficher la fiche du professeur sélectionné
     case 'professeur':
-        echo 'vue professeur par id';
+        $users->getUser($data[2]);
         break;
 }

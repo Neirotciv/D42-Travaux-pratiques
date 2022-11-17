@@ -1,9 +1,12 @@
 <?php
-require('./Database/Database.php');
+
+namespace Models;
+
+use \Database\Database;
 
 class Model 
 {
-    private $pdo;
+    private object $pdo;
 
     public function __construct()
     {
@@ -11,10 +14,17 @@ class Model
         $this->pdo = $database->connect();
     }
 
-    protected function fetch(string $sql, array $params = [])
+    protected function fetchAll(string $sql, array $params = []): array
     {
         $sth = $this->pdo->prepare($sql);
         $sth->execute($params);
-        return $sth->fetchAll(PDO::FETCH_CLASS);
+        return $sth->fetchAll(\PDO::FETCH_CLASS);
+    }
+
+    protected function fetch(string $sql, array $params = []): object
+    {
+        $sth = $this->pdo->prepare($sql);
+        $sth->execute($params);
+        return $sth->fetch(\PDO::FETCH_OBJ);
     }
 }

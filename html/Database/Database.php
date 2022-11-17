@@ -1,5 +1,7 @@
 <?php
 
+namespace Database;
+
 class Database
 {
     private $pdo;
@@ -12,9 +14,9 @@ class Database
         $options = [];
 
         try {
-            $this->pdo = new PDO($dsn, $username, $password, $options);
+            $this->pdo = new \PDO($dsn, $username, $password, $options);
             return $this->pdo;
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             echo "Erreur : " . $e->getMessage();
             die();
         }

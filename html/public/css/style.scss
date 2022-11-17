@@ -1,0 +1,37 @@
+$bg-main: white;
+$bg-card: white;
+
+html {
+    background-color: $bg-main;
+}
+
+.container {
+    width: 90%;
+}
+
+.card {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // align-items: center;
+    margin: 20px;
+    height: 350px;
+    width: 250px;
+    background-color: $bg-card;
+    box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+    transition: transform .2s;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .details {
+        text-align: center;
+    }
+}
