@@ -21,13 +21,14 @@ class CoursesModel extends Model
     public function course(int $id)
     {
         $sql = "SELECT
-            id,
-            code,
-            title,
-            img,
-            description
-            FROM courses
-            WHERE id = :id;
+            c.id,
+            c.code,
+            c.title,
+            c.img,
+            c.description
+            FROM courses AS c
+            LEFT JOIN users AS u ON c.idUser = u.id
+            WHERE c.id = :id;
         ";
 
         return $this->fetch($sql, [':id' => $id]);

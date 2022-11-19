@@ -12,9 +12,10 @@ class Autoloader
     public static function autoload(string $class): string
     {
         $class = str_replace('\\', '/', $class);
+       
         $paths = array(
-            implode(DS, [ROOT, 'App', 'Controllers']),
-            implode(DS, [ROOT, 'App']),
+            implode(DS, [ROOT, 'Router']),
+            implode(DS, [ROOT, 'Controllers']),
             implode(DS, [ROOT])
         );
 

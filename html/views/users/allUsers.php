@@ -1,19 +1,18 @@
 <?php 
-extract(['teachers', 'lines']); 
-echo $lines;
+extract(['users', 'lines']);
 ob_start();
 ?>
 
 <?php for($i=0; $i < $lines; $i++): ?>
     <div class="row">
-        <?php foreach($teachers as $teacher): ?>
+        <?php foreach($users as $user): ?>
             <div>
-            <a href="/professeur/<?= $teacher->id; ?>">
+            <a href="/professeur/<?= $user->id; ?>">
                 <div class="card">
-                    <img src="./public/img/avatars/<?= $teacher->avatar ?>" alt="">
+                    <img src="./public/img/avatars/<?= $user->avatar ?>" alt="">
                     <div class="details">
-                        <h2><?= $teacher->firstname . ' ' . $teacher->lastname; ?></h2>
-                        <h3><?= $teacher->role; ?></h3>
+                        <h2><?= $user->firstname . ' ' . $user->lastname; ?></h2>
+                        <h3><?= $user->role; ?></h3>
                     </div>
                 </div>  
             </a>
@@ -28,5 +27,5 @@ require('views/layout.php');
 ?>
 
 <pre>
-    <?php var_dump($teachers); ?>
+    <?php var_dump($users); ?>
 </pre>

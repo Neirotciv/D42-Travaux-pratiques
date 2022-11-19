@@ -9,12 +9,13 @@
     <title><?= isset($title) ? $title : 'Sans titre'; ?></title>
 </head>
 <body>
-    faire description et titre
-    <nav>
-        <a href="/">Index</a>
-        <a href="/cours">Liste des cours</a>
-        <a href="/professeurs">Liste des professeurs</a>
-    </nav>
+    <header>
+        <nav>
+            <a href="/">Index</a>
+            <a href="/cours">Cours</a>
+            <a href="/professeurs">Professeurs</a>
+        </nav>
+    </header>
     <div class="container">
         <?= $content ?>
     </div>

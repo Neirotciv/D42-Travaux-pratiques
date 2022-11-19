@@ -20,9 +20,9 @@ class UsersController
      */
     public function getUsers(): void
     {
-        $teachers = $this->model->users();
-        $lines = (int)ceil(count($teachers) / 3);
-        compact('teachers', 'lines');
+        $users = $this->model->users();
+        $lines = (int)ceil(count($users) / 3);
+        compact('users', 'lines');
         include('../html/views/users/allUsers.php');
     }
     
@@ -34,8 +34,8 @@ class UsersController
      */
     public function getUser(int $id): void
     {
-        $teacher = $this->model->user($id);
-        compact('teacher');
+        $user = $this->model->user($id);
+        compact('user');
         include('../html/views/users/user.php');
     }
 }

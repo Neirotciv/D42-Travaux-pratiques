@@ -1,23 +1,23 @@
-<?php extract(['teacher']); ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="../public/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <div class="card">
-            <?= $teacher->firstname; ?>
-        </di>
+<?php 
+extract(['user']);
+ob_start();
+?>
+
+<!-- <div class="card">
+    <img src="./public/img/avatars/<?= $user->avatar; ?>" alt="">
+    <div class="details">
+        <h2><?= $user->firstname . ' ' . $user->lastname; ?></h2>
+        <p><?= $user->trigram; ?></p>
     </div>
-</body>
-</html>
+</div> -->
+
+<?php echo $user->lastname; ?>
+
+<?php 
+$content = ob_get_clean();
+require('views/layout.php');
+?>
 
 <pre>
-<?php print_r($teacher); ?>
+<?php print_r($user); ?>
 </pre>
