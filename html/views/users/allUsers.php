@@ -9,7 +9,7 @@ ob_start();
             <div>
             <a href="/professeur/<?= $user->id; ?>">
                 <div class="card">
-                    <img src="./public/img/avatars/<?= $user->avatar ?>" alt="">
+                    <img src="/public/img/avatars/<?= $user->avatar ?>" alt="">
                     <div class="details">
                         <h2><?= $user->firstname . ' ' . $user->lastname; ?></h2>
                         <h3><?= $user->role; ?></h3>

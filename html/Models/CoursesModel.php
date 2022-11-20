@@ -7,12 +7,14 @@ class CoursesModel extends Model
     public function courses()
     {
         $sql = "SELECT
-            id,
-            code,
-            title,
-            img,
-            description
-            FROM courses
+            c.id,
+            c.code,
+            c.title,
+            c.img,
+            c.alt,
+            u.trigram
+            FROM courses AS c
+            LEFT JOIN users AS u ON u.id = c.idUser
         ";
         
         return $this->fetchAll($sql);
@@ -21,14 +23,17 @@ class CoursesModel extends Model
     public function course(int $id)
     {
         $sql = "SELECT
-            c.id,
             c.code,
             c.title,
             c.img,
-            c.description
-            FROM courses AS c
-            LEFT JOIN users AS u ON c.idUser = u.id
-            WHERE c.id = :id;
+            c.alt,
+            c.description,
+            u.firstname,
+            u.lastname,
+            u.trigram
+            FROM `courses` AS c
+            LEFT JOIN users AS u ON u.id = c.idUser
+            WHERE c.id = :id
         ";
 
         return $this->fetch($sql, [':id' => $id]);

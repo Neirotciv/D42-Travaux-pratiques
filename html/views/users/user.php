@@ -3,15 +3,15 @@ extract(['user']);
 ob_start();
 ?>
 
-<!-- <div class="card">
-    <img src="./public/img/avatars/<?= $user->avatar; ?>" alt="">
+<div class="card">
+    <img src="/public/img/avatars/<?= $user->avatar; ?>" alt="<?= $user->alt; ?>">
     <div class="details">
         <h2><?= $user->firstname . ' ' . $user->lastname; ?></h2>
-        <p><?= $user->trigram; ?></p>
+        <p><?= $user->phone; ?></p>
+        <p><?= $user->address; ?></p>
     </div>
-</div> -->
+</div>
 
-<?php echo $user->lastname; ?>
 
 <?php 
 $content = ob_get_clean();

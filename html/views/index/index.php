@@ -11,11 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <a href="/cours">Consulter la liste des cours</a>
-        </div>
-        <div class="card">
-            <a href="/professeurs">Consulter la liste des professeurs</a>
+        <div class="category">
+            <div class="card">
+                <a href="/cours">
+                    <div class="link-card">
+                        <p>Consulter la liste des cours</>
+                    </div>    
+                </a>
+            </div>
+            <div class="card">
+                <a href="/professeurs">Consulter la liste des professeurs</a>
+            </div>
         </div>
     </div>
 </body>

@@ -41,9 +41,6 @@ switch ($page)
         }
         $courses->allCourses();
         break;
-    case 'cours/id':
-        $courses->course(4);
-        break;
     case 'professeurs':
         $users->getUsers();
         break;

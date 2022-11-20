@@ -22,6 +22,8 @@ services:
       - "3360:3306"
     volumes:
       - db-dfs:/var/lib/mysql
+      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+
   adminer:
     image: adminer
     restart: always

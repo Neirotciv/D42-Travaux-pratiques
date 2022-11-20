@@ -7,10 +7,11 @@ ob_start();
 <?php foreach($courses as $course): ?>
     <div class="card">
         <a href="/cours/<?= $course->id ?>">
-            <img src="./public/img/courses/<?= $course->img ?>" alt="">
+            <img src="./public/img/courses/<?= $course->img ?>" alt="<?= $course->alt ?>">
             <div class="details">
                 <h2><?= $course->code ?></h2>
                 <h3><?= $course->title ?><h3>
+                <h3><?= $course->trigram ?><h3>
             </div>
         </a>
     </div>  

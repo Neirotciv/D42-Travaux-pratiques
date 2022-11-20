@@ -5,15 +5,17 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+USE `dfs`;
+
 SET NAMES utf8mb4;
 
 DROP TABLE IF EXISTS `courses`;
 CREATE TABLE `courses` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `code` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `code` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `img` tinytext COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci NOT NULL,
+  `img` tinytext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `idUser` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idUser` (`idUser`),
@@ -29,12 +31,12 @@ INSERT INTO `courses` (`id`, `code`, `title`, `img`, `description`, `idUser`) VA
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `lastname` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `avatar` text COLLATE utf8mb4_general_ci NOT NULL,
-  `address` text COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `trigram` varchar(3) COLLATE utf8mb4_general_ci NOT NULL,
+  `firstname` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `lastname` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `avatar` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `address` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `trigram` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `role` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -45,4 +47,4 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `avatar`, `address`, `phone`
 (3,	'Martial',	'Berger',	'3551739.jpg',	'861-2631 Tempor Road\r\n53886 Reims',	'01 65 22 48 37',	'MBE',	'Professeur'),
 (4,	'Julio',	'Ribeiro',	'3551739.jpg',	'861-2631 Tempor Road\r\n53886 Reims',	'01 65 22 48 37',	'JRI',	'Professeur');
 
--- 2022-11-20 09:38:35
+-- 2022-11-20 14:36:41

@@ -11,9 +11,7 @@ class UsersModel extends Model
             firstname,
             lastname,
             avatar,
-            address,
-            phone,
-            trigram,
+            alt,
             role
             FROM users;
         ";
@@ -28,9 +26,9 @@ class UsersModel extends Model
             firstname,
             lastname,
             avatar,
+            alt,
             address,
-            phone,
-            trigram
+            phone
             FROM users
             WHERE id = :id
         ";

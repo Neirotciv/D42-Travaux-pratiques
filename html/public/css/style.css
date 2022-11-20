@@ -1,6 +1,11 @@
 html {
-  box-sizing: border-box;
   background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -20,6 +25,14 @@ header nav a {
   background-blend-mode: overlay, overlay, overlay, normal;
 }
 
+.category {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   margin: 20px;
   height: 350px;
@@ -37,6 +50,14 @@ header nav a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.card .link-card {
+  width: 100%;
+  height: 100%;
+}
 .card .details {
   text-align: center;
+}
+
+.details img {
+  height: 200px;
 }/*# sourceMappingURL=style.css.map */
