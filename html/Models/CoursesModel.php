@@ -9,8 +9,8 @@ class CoursesModel extends Model
         $sql = "SELECT
             c.id,
             c.code,
-            c.title,
             c.img,
+            c.title,
             c.alt,
             u.trigram
             FROM courses AS c

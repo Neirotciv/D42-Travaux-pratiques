@@ -1,4 +1,3 @@
-<?php extract(['courses']); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,12 +14,18 @@
             <div class="card">
                 <a href="/cours">
                     <div class="link-card">
-                        <p>Consulter la liste des cours</>
+                        <img src="/public/img/courses/courses.svg" alt="">
+                        <h1>Liste des cours</h1>
                     </div>    
                 </a>
             </div>
             <div class="card">
-                <a href="/professeurs">Consulter la liste des professeurs</a>
+                <a href="/professeurs">
+                    <div class="link-card">
+                        <img src="/public/img/avatars/teachers.svg" alt="">
+                        <h1>Liste des professeurs</h1>
+                    </div>    
+                </a>
             </div>
         </div>
     </div>

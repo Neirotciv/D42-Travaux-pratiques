@@ -21,6 +21,7 @@ class CoursesController
     public function allCourses(): void
     {
         $courses = $this->model->courses();
+        
         compact('courses');
         include('views/courses/allCourses.php');
     }
