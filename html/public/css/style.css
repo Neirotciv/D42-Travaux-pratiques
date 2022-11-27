@@ -28,22 +28,29 @@ header nav a {
 
 .container {
   width: 90%;
-  display: flex;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .category {
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.cards-container {
+  display: flex;
+  margin: 20px auto;
+}
+
 .card {
   height: 200px;
   width: 250px;
   margin: 20px;
+  border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.2s;
@@ -82,4 +89,15 @@ header nav a {
 
 .details img {
   height: 200px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+}
+.details h3, .details p {
+  margin-bottom: 10px;
+}
+.details span {
+  display: block;
+  margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */

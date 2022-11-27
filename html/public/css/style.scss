@@ -38,20 +38,27 @@ header {
 
 .container {
     width: 90%;
-    display: flex;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .category {
-    width: 100vw;
     height: 100vh;
     @include center();
+}
+
+.cards-container {
+    display: flex;
+    margin: 20px auto;
 }
 
 .card {
     height: 200px;
     width: 250px;
     margin: 20px;
+    border-radius: 5px;
     background-color: $bg-card;
     box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
     transition: transform .2s;
@@ -95,5 +102,18 @@ header {
 .details {
     img {
         height: 200px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+        border: 2px solid white;
+    }
+
+    h3, p {
+        margin-bottom: 10px;
+    }
+    
+    span {
+        display: block;
+        margin: 10px 0;
     }
 }

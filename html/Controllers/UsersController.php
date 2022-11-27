@@ -18,7 +18,7 @@ class UsersController
      *
      * @return void
      */
-    public function getUsers(): void
+    public function allUsers(): void
     {
         $users = $this->model->users();
         $lines = (int)ceil(count($users) / 3);

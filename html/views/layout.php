@@ -13,7 +13,7 @@
         <nav>
             <a href="/">Index</a>
             <a href="/cours">Cours</a>
-            <a href="/professeurs">Professeurs</a>
+            <a href="/utilisateurs">Utilisateurs</a>
         </nav>
     </header>
     <div class="container">

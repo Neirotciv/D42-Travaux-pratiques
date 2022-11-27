@@ -8,7 +8,7 @@ ob_start();
     <h3><?= $course->title . ' - ' . $course->code; ?></h3>
     <p><?= $course->description; ?></p>
     <hr>
-    <p><?= $course->firstname . ' ' . $course->lastname . ' - ' . $course->trigram; ?></p>
+    <span><?= $course->firstname . ' ' . $course->lastname . ' - ' . $course->trigram; ?></span>
 </div>
 
 <?php 

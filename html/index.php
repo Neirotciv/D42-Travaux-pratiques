@@ -17,20 +17,17 @@ $page = $data[1];
 
 $users = new UsersController();
 $courses = new CoursesController();
-// $router = new Router();
+$router = new Router();
 
-// $router->get('/professeurs', 'users.getUsers');
-// $router->get('/professeurs/id', 'users.getUser');
-// $router->get('/cours', 'courses.getCourses');
+// $router->get('/', 'index');
+// $router->get('/professeurs', 'users.allUsers');
+// $router->get('/professeurs/:id', 'users.getUser');
+// $router->get('/cours', 'courses.allCourses');
 // $router->get('/cours/id', 'courses.getCourse');
 
 // $router->useRoute();
 
-echo '<pre>';
-echo '</pre>';
-
-switch ($page) 
-{
+switch ($page) {
     case '':
         include('./views/index/index.php');
         break;
@@ -41,11 +38,10 @@ switch ($page)
         }
         $courses->allCourses();
         break;
-    case 'professeurs':
-        $users->getUsers();
+    case 'utilisateurs':
+        $users->allUsers();
         break;
-    case 'professeur':
-        print_r($data);
+    case 'utilisateur':
         $users->getUser($data[2]);
         break;
 }

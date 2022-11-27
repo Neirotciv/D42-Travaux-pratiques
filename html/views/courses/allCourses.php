@@ -5,7 +5,7 @@ ob_start();
 ?>
 
 <h1>Liste des cours</h1>
-<div class="card-container">
+<div class="cards-container">
     <?php foreach($courses as $course):
         if (strlen($course->title) > 20) {
             $course->title = substr($course->title, 0, 18) . '...';

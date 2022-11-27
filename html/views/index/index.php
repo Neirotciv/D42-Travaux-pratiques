@@ -20,10 +20,10 @@
                 </a>
             </div>
             <div class="card">
-                <a href="/professeurs">
+                <a href="/utilisateurs">
                     <div class="link-card">
-                        <img src="/public/img/avatars/teachers.svg" alt="">
-                        <h1>Liste des professeurs</h1>
+                        <img src="/public/img/avatars/users.svg" alt="">
+                        <h1>Liste des utilisateurs</h1>
                     </div>    
                 </a>
             </div>
