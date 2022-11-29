@@ -2,11 +2,19 @@
 
 namespace Database;
 
+/**
+ * Use for connection between PHP and the database server
+ */
 class Database
 {
     private $pdo;
 
-    public function connect()
+    /**
+     * Connection to database
+     * Displays an error if there is a connection problem
+     * @return object An instance of the PDO object
+     */
+    public function connect(): object
     {
         $dsn = 'mysql:host=mysql;dbname=dfs;charset=utf8';
         $username = 'user';

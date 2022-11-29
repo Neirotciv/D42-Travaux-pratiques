@@ -4,7 +4,7 @@ namespace Controllers;
 
 use \Models\CoursesModel;
 
-class CoursesController
+class CoursesController extends Controller
 {
     private object $model;
     
@@ -15,20 +15,18 @@ class CoursesController
     
     /**
      * allCourses Get all the courses and display in view
-     *
      * @return void
      */
     public function allCourses(): void
     {
         $courses = $this->model->courses();
-        
-        compact('courses');
+        $lines = $this->numberOfLines(count($courses), 3);
+        compact('courses', 'lines');
         include('views/courses/allCourses.php');
     }
     
     /**
-     * course Get the course and display in view
-     *
+     * course Get the course identified by the id and display in view
      * @param  mixed $id The id of the course we want to get
      * @return void
      */

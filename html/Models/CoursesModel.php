@@ -2,9 +2,16 @@
 
 namespace Models;
 
+/**
+ * Queries on the course table
+ */
 class CoursesModel extends Model
 {
-    public function courses()
+    /**
+     * Get all courses
+     * @return array An object array of courses with teachers info
+     */
+    public function courses(): array
     {
         $sql = "SELECT
             c.id,
@@ -20,6 +27,11 @@ class CoursesModel extends Model
         return $this->fetchAll($sql);
     }
 
+    /**
+     * Get one course from $id
+     * @param integer $id A course's identifier
+     * @return object Course data as an object
+     */
     public function course(int $id)
     {
         $sql = "SELECT

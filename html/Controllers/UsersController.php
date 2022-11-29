@@ -14,8 +14,7 @@ class UsersController
     }
     
     /**
-     * getUsers
-     *
+     * getUsers Get all users in databases and display in view
      * @return void
      */
     public function allUsers(): void
@@ -27,8 +26,7 @@ class UsersController
     }
     
     /**
-     * getUser Get the user in database and display in view
-     *
+     * getUser Get the user identified by the id in database and display in view
      * @param  mixed $id The id of the user we want to get
      * @return void
      */
