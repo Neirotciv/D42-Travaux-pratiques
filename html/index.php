@@ -17,15 +17,6 @@ $page = $data[1];
 
 $users = new UsersController();
 $courses = new CoursesController();
-$router = new Router();
-
-// $router->get('/', 'index');
-// $router->get('/professeurs', 'users.allUsers');
-// $router->get('/professeurs/:id', 'users.getUser');
-// $router->get('/cours', 'courses.allCourses');
-// $router->get('/cours/id', 'courses.getCourse');
-
-// $router->useRoute();
 
 switch ($page) {
     case '':
