@@ -1,5 +1,4 @@
 <?php 
-extract(['user']);
 ob_start();
 ?>
 

@@ -58,11 +58,11 @@ header {
 }
 
 .cards-container {
-    display: flex;
     margin: 20px auto;
 }
 
 .card {
+    display: inline-block;
     height: 200px;
     width: 250px;
     margin: 20px;

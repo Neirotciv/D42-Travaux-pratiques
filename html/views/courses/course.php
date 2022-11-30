@@ -1,5 +1,4 @@
 <?php 
-extract(['course']); 
 ob_start();
 ?>
 

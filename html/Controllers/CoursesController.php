@@ -20,8 +20,6 @@ class CoursesController extends Controller
     public function allCourses(): void
     {
         $courses = $this->model->courses();
-        $lines = $this->numberOfLines(count($courses), 3);
-        compact('courses', 'lines');
         include('views/courses/allCourses.php');
     }
     
@@ -33,7 +31,6 @@ class CoursesController extends Controller
     public function course(int $id): void
     {
         $course = $this->model->course($id);
-        compact('course');
         include('../html/views/courses/course.php');
     }
 }
