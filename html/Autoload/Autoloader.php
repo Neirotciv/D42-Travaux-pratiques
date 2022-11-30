@@ -25,10 +25,11 @@ class Autoloader
      * @param string $class
      * @return string
      */
-    public static function autoload(string $class): string
+    public static function autoload(string $class): mixed
     {
         $class = str_replace('\\', '/', $class);
        
+        // Path to the different classes
         $paths = array(
             implode(DS, [ROOT, 'Router']),
             implode(DS, [ROOT, 'Controllers']),
@@ -36,6 +37,7 @@ class Autoloader
             implode(DS, [ROOT])
         );
 
+        // Look for the class file in the different directories
         foreach($paths as $path) {
             $file = implode(DS, [$path, $class . '.php']);
             if (file_exists($file)) {
