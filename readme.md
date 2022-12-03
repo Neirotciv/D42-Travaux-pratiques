@@ -1,7 +1,16 @@
 # D42 - Travaux pratiques
 ## Créer une application web qui permet de consulter la liste des utilisateurs et la liste des cours DFS
 
-## Cahier des charges
+### Docker
+```bash
+git clone git@github.com:Neirotciv/D42-Travaux-pratiques.git
+cd D42-Travaux-pratiques
+docker-compose up
+```
+
+adresse: http://localhost:9000/
+
+### Cahier des charges
 - Une page web qui affiche la liste des utilisateurs (professeurs).  
   - Nom
   - Prénom
