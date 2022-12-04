@@ -10,6 +10,17 @@ docker-compose up
 
 adresse: http://localhost:9000/
 
+### Installation manuelle
+Le fichier d'import sql se trouve dans dossier data.
+
+```php
+// Identifiant utilisé pour la connection à mysql
+$dsn = 'mysql:host=mysql;dbname=dfs;charset=utf8';
+$username = 'user';
+$password = 'password';
+$options = [];
+```
+
 ### Cahier des charges
 - Une page web qui affiche la liste des utilisateurs (professeurs).  
   - Nom
